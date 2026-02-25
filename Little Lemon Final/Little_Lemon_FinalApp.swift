@@ -3,15 +3,16 @@
 //  Little Lemon Final
 //
 //  Created by MacBook Pro on 25/02/2026.
-//
+//  Author: asadbyte
 
 import SwiftUI
+import CoreData
 
 @main
 struct Little_Lemon_FinalApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+          Onboarding().environment(\.managedObjectContext, PersistenceController.shared.container.viewContext)
         }
     }
 }
